@@ -57,7 +57,7 @@ const Header = (): JSX.Element => {
   const { onChangeActiveNavigation, activeNavigation } = useActiveNavigation()
 
   return (
-   <div className="fixed top-1/2 left-5 transform -translate-y-1/2">
+   <div>
      {headersList.map((header: HeaderItem) => (
        <React.Fragment key={header.key}>
          {renderHeaderItem(header, onChangeActiveNavigation, activeNavigation === header.key)}

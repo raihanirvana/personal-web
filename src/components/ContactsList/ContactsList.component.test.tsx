@@ -11,7 +11,7 @@ describe('ContactsList Component', () => {
 
   it('calls window.open with the correct URL when a contact button is clicked', async () => {
     render(<ContactsList />);
-    
+
     const openMock = jest.spyOn(window, 'open').mockImplementation(() => null);
 
     const buttons = screen.getAllByRole('button');
@@ -20,7 +20,7 @@ describe('ContactsList Component', () => {
       await userEvent.click(buttons[i]);
       expect(openMock).toHaveBeenCalledWith(ContactsListItem[i].href);
     }
-    
+
     openMock.mockRestore();
   });
 });

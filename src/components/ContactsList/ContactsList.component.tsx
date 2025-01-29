@@ -1,6 +1,6 @@
-import ContactsListItem from "../../data/ContactsList.data";
+import ContactsListItem from '../../data/ContactsList.data';
 
-import { ContactList } from './ContactsList.component.type'
+import { ContactList } from './ContactsList.component.type';
 
 const ContactsList = (): JSX.Element => (
   <div className="flex items-center gap-3">
