@@ -6,7 +6,9 @@ import tseslint from 'typescript-eslint';
 import jsdoc from 'eslint-plugin-jsdoc'; // Tambahkan plugin jsdoc
 
 export default tseslint.config(
-  { ignores: ['dist'] },
+  { 
+    ignores: ['dist', '**/*.test.ts', '**/*.test.tsx'] 
+  },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
