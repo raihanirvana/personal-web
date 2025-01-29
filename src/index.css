@@ -1,4 +1,4 @@
-@import "tailwindcss";  
+@import "tailwindcss";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -13,4 +13,23 @@
 body {
   height: 100%;
   margin: 0;
+}
+
+@font-face {
+  font-family: 'RigidReguler';
+  font-style: normal;
+  font-weight: normal;
+  src: url('public/font/RigidRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'RigidMedium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('public/font/RigidMedium.woff') format('woff');
+}
+
+@theme {
+  --font-rigid-reguler: 'RigidReguler', 'sans-serif';
+  --font-rigid-medium: 'RigidMedium', 'sans-serif';
 }

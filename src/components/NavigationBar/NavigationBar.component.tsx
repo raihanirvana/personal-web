@@ -53,7 +53,7 @@ const useActiveNavigation = (): UseActiveButtonReturn => {
  * 
  * @returns {JSX.Element} A JSX element containing the header list.
  */
-const Header = (): JSX.Element => {
+const NavigationBar = (): JSX.Element => {
   const { onChangeActiveNavigation, activeNavigation } = useActiveNavigation()
 
   return (
@@ -67,4 +67,4 @@ const Header = (): JSX.Element => {
  )
 };
 
-export default Header;
+export default NavigationBar;

@@ -2,6 +2,11 @@ import ContactsListItem from '../../data/ContactsList.data';
 
 import { ContactList } from './ContactsList.component.type';
 
+/**
+ * function to make contact list
+ * 
+ * @returns its return contacts list component
+ */
 const ContactsList = (): JSX.Element => (
   <div className="flex items-center gap-3">
     {ContactsListItem.map((contact: ContactList) => (
