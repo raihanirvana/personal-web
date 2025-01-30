@@ -4,11 +4,11 @@ import { useTypewriter } from 'react-simple-typewriter';
 import { Name, UseShowSecondText } from './NameDisplay.component.type';
 
 /**
- * hooks for show second text and get typewriter props
+ * hooks for show second text and get typewriter props.
  * 
- * @param {string} firstName first name
- * @param {string} secondName second name
- * @returns {UseShowSecondText} flag for show second text
+ * @param {string} firstName first name.
+ * @param {string} secondName second name.
+ * @returns {UseShowSecondText} flag for show second text.
  */
 const useTypeWriterText = (firstName: string, secondName: string): UseShowSecondText => {
   const [showSecondText, setShowSecondText] = React.useState<boolean>(false);
