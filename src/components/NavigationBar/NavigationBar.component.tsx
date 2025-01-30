@@ -2,11 +2,11 @@ import React from 'react';
 
 import headersList from '../../data/NavigationsList.data';
 
-import { HeaderItem, UseActiveButtonReturn } from './NavigationBar.component.type'
+import { HeaderItem, UseActiveButtonReturn, Props } from './NavigationBar.component.type'
 
-const baseClass = "w-10 text-white overflow-hidden text-center p-4 flex gap-4 items-center pb-6";
-const activeClass = "overflow-visible w-36 transition-all duration-300 ease-in-out cursor-pointer pl-8";
-const hoverClass = "hover:overflow-visible hover:w-36 transition-all duration-300 ease-in-out hover:cursor-pointer hover:pl-8";
+const baseClass = "w-10 overflow-hidden text-white text-center gap-4 flex items-center m-10";
+const activeClass = "overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-30 rounded-lg shadow-md border-b-4 border-l-1 border-white-700 transform hover:shadow-lg hover:translate-y-[-2px] p-2";
+const hoverClass = "hover:overflow-visible hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer";
 
 /**
  * Renders a header element with optional styles for first or last headers.
@@ -36,8 +36,8 @@ const renderHeaderItem = (
  * 
  * @returns {UseActiveButtonReturn} return state and onChange function
  */
-const useActiveNavigation = (): UseActiveButtonReturn => {
-  const [activeNavigation, setActiveNavigation] = React.useState<number>(1)
+const useActiveNavigation = (activeBar: number): UseActiveButtonReturn => {
+  const [activeNavigation, setActiveNavigation] = React.useState<number>(activeBar)
 
   const onChangeActiveNavigation = React.useCallback((key: number): void => {
     setActiveNavigation(key);
@@ -53,11 +53,11 @@ const useActiveNavigation = (): UseActiveButtonReturn => {
  * 
  * @returns {JSX.Element} A JSX element containing the header list.
  */
-const NavigationBar = (): JSX.Element => {
-  const { onChangeActiveNavigation, activeNavigation } = useActiveNavigation()
+const NavigationBar = ({activeBar}: Props): JSX.Element => {
+  const { onChangeActiveNavigation, activeNavigation } = useActiveNavigation(activeBar)
 
   return (
-   <div>
+   <div className='flex pr-6'>
      {headersList.map((header: HeaderItem) => (
        <React.Fragment key={header.key}>
          {renderHeaderItem(header, onChangeActiveNavigation, activeNavigation === header.key)}
