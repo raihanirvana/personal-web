@@ -1,5 +1,5 @@
 import { render, act, renderHook } from '@testing-library/react';
-
+import { MemoryRouter } from 'react-router-dom'; // Tambahkan ini
 import Home, { useCountdownDisplay } from './Home.page';
 
 describe('Home Page', () => {
@@ -7,12 +7,20 @@ describe('Home Page', () => {
     jest.useFakeTimers();
   
     it('should match snapshot initially', () => {
-      const { asFragment } = render(<Home />);
+      const { asFragment } = render(
+        <MemoryRouter>
+          <Home />
+        </MemoryRouter>
+      );
       expect(asFragment()).toMatchSnapshot();
     });
   
     it('should match snapshot after 4700ms', () => {
-      const { asFragment } = render(<Home />);
+      const { asFragment } = render(
+        <MemoryRouter>
+          <Home />
+        </MemoryRouter>
+      );
       
       act(() => {
         jest.advanceTimersByTime(4700);
@@ -57,5 +65,4 @@ describe('Home Page', () => {
       jest.clearAllMocks();
     });
   });
-  
- })
+});

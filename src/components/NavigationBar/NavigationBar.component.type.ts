@@ -2,6 +2,7 @@ export type HeaderItem = {
   key: number;
   icon: JSX.Element;
   title: string;
+  navigation: string;
 };
 
 export type Props = {
