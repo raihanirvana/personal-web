@@ -1,5 +1,5 @@
 import { render, act, renderHook } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom'; // Tambahkan ini
+import { MemoryRouter } from 'react-router-dom';
 import Home, { useCountdownDisplay } from './Home.page';
 
 describe('Home Page', () => {

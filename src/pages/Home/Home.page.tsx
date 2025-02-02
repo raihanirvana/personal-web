@@ -28,8 +28,8 @@ const navigationBarAndContacts = (): JSX.Element => (
  */
 const navigationButton = (): JSX.Element => (
   <div className="pt-15 flex gap-5 justify-center ml-[-1rem]">
-    <NavigationButton text="Resume" />
-    <NavigationButton text="Portfolio" />
+    <NavigationButton text="Resume" navigate='/resume' />
+    <NavigationButton text="Project" navigate='/project' />
   </div>
 );
 

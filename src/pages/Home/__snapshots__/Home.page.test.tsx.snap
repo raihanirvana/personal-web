@@ -191,16 +191,20 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
       <div
         class="pt-15 flex gap-5 justify-center ml-[-1rem]"
       >
-        <button
-          class="border-white border-2 border-solid rounded-xl p-2 text-white w-50 hover:cursor-pointer text-2xl font-mono"
+        <a
+          class="border-white border-2 border-solid text-center rounded-xl p-2 text-white w-50 hover:cursor-pointer text-2xl font-mono hover:border-b-4 hover:border-white-400 hover:bg-black hover:rounded-lg"
+          data-discover="true"
+          href="/resume"
         >
           Resume
-        </button>
-        <button
-          class="border-white border-2 border-solid rounded-xl p-2 text-white w-50 hover:cursor-pointer text-2xl font-mono"
+        </a>
+        <a
+          class="border-white border-2 border-solid text-center rounded-xl p-2 text-white w-50 hover:cursor-pointer text-2xl font-mono hover:border-b-4 hover:border-white-400 hover:bg-black hover:rounded-lg"
+          data-discover="true"
+          href="/project"
         >
-          Portfolio
-        </button>
+          Project
+        </a>
       </div>
     </div>
   </div>

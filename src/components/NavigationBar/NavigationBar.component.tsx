@@ -72,11 +72,7 @@ const NavigationBar = ({ activeBar }: Props): JSX.Element => {
     <div className="flex pr-6">
       {headersList.map((header: HeaderItem) => (
         <React.Fragment key={header.key}>
-          {renderHeaderItem(
-            header,
-            onChangeActiveNavigation,
-            activeNavigation === header.key
-          )}
+          {renderHeaderItem(header, onChangeActiveNavigation,activeNavigation === header.key)}
         </React.Fragment>
       ))}
     </div>
