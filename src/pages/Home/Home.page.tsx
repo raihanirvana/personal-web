@@ -101,7 +101,7 @@ const Home = (): JSX.Element => {
   const { showRole, showButtonNavigation } = useHomeEffect()
 
   return (
-    <div className="w-full bg-[url('assets/home-background.jpg')] bg-cover bg-no-repeat bg-center h-screen">
+    <div className="w-full bg-[url('public/assets/home-background.jpg')] bg-cover bg-no-repeat bg-center h-screen">
     <Helmet>
       <title>Home</title>
     </Helmet>
