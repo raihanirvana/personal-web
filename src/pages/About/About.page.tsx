@@ -22,7 +22,7 @@ const About = (): JSX.Element => (
       </div>
       <div className="flex-1 flex items-end">
         <img
-          src="public/assets/raihan.jpg"
+          src="assets/raihan.jpg"
           alt="user-picture"
           className="w-full h-[90vh] object-cover object-top rounded-md"
         />
