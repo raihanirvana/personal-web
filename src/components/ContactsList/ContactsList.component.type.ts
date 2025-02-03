@@ -1,5 +1,8 @@
 export type ContactList = {
   key: number,
   icon: JSX.Element,
-  href: string
+  href: string,
+  label: string,
 }
+
+export type ContactListData = ContactList[]

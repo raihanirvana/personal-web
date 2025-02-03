@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`General Text must matches snapshot 1`] = `
+<DocumentFragment>
+  <p
+    class="text-white text-3xl"
+  >
+    saya ganteng
+  </p>
+</DocumentFragment>
+`;

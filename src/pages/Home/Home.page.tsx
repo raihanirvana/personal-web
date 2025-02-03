@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { NavigationBar, ContactsList } from '../../components';
+import { Helmet } from "react-helmet-async";
+
+import { NavigationBar, ContactsList, GeneralText } from '../../components';
 
 import { NameDisplay, NavigationButton } from './components';
 import { useHomeEffectReturn } from './Home.page.type'
@@ -12,7 +14,7 @@ import { useHomeEffectReturn } from './Home.page.type'
  */
 const navigationBarAndContacts = (): JSX.Element => (
   <React.Fragment>
-    <div className="fixed top-0 right-5">
+    <div className="fixed top-10 left-60">
       <NavigationBar activeBar={1} />
    </div>
     <div className="fixed bottom-0 left-60 pb-10">
@@ -47,9 +49,7 @@ const heroSection = (
   <div className="justify-center pl-60 pt-70 flex-col w-fit">
     <NameDisplay firstName="RAIHAN" secondName="IRVANA" />
     {showRole && (
-      <p className="text-white font-medium tracking-[.85rem] text-3xl">
-        Full Stack Engineer
-      </p>
+      <GeneralText text='Full Stack Engineer' customStyle="font-medium tracking-[.85rem] text-3xl" />
     )}
     {showButtonNavigation && navigationButton()}
   </div>
@@ -102,6 +102,9 @@ const Home = (): JSX.Element => {
 
   return (
     <div className="w-full bg-[url('assets/home-background.jpg')] bg-cover bg-no-repeat bg-center h-screen">
+    <Helmet>
+      <title>Home</title>
+    </Helmet>
       {navigationBarAndContacts()}
       {heroSection(showRole, showButtonNavigation)}
     </div>
