@@ -11,7 +11,7 @@ import {
   SiReact
 } from 'react-icons/si';
 
-import { TechStack } from '../pages/About/components/TechStack.component.type';
+import { TechStack } from '../pages/About/components/TechStack/TechStack.component.type';
 
 const techStackData: TechStack = [
   { key: 1, logo: <SiExpress /> },

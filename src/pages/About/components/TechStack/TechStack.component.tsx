@@ -1,6 +1,6 @@
 import React from 'react'
 
-import techStackData from '../../../data/TechStack.data';
+import techStackData from '../../../../data/TechStack.data';
 
 import './TechStack.component.css';
 

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 
 import { NavigationBar, ContactsList, GeneralText } from '../../components';
 
-import TechStack from './components/TechStack.component';
+import TechStack from './components/TechStack/TechStack.component';
 
 const aboutText = `Full Stack Engineer with deep expertise in the JavaScript ecosystem and over three years of experience in full-stack web and mobile development. Specializing in building scalable, high-performance applications using React, React Native, Next.js, and Node.js.`;
 
