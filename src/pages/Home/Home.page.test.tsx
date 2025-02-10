@@ -1,5 +1,7 @@
 import { render, act, renderHook } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+
 import Home, { useCountdownDisplay } from './Home.page';
 
 describe('Home Page', () => {
@@ -8,18 +10,22 @@ describe('Home Page', () => {
   
     it('should match snapshot initially', () => {
       const { asFragment } = render(
-        <MemoryRouter>
-          <Home />
-        </MemoryRouter>
+        <HelmetProvider>
+          <MemoryRouter>
+            <Home />
+         </MemoryRouter>
+        </HelmetProvider>
       );
       expect(asFragment()).toMatchSnapshot();
     });
   
     it('should match snapshot after 4700ms', () => {
       const { asFragment } = render(
-        <MemoryRouter>
-          <Home />
-        </MemoryRouter>
+        <HelmetProvider>
+          <MemoryRouter>
+            <Home />
+         </MemoryRouter>
+        </HelmetProvider>
       );
       
       act(() => {

@@ -3,7 +3,7 @@
 exports[`NavigationButton must match snapshot 1`] = `
 <DocumentFragment>
   <a
-    class="border-white border-2 border-solid text-center rounded-xl p-2 text-white w-50 hover:cursor-pointer text-2xl font-mono hover:border-b-4 hover:border-white-400 hover:bg-black hover:rounded-lg"
+    class="border-white border-2 border-solid text-center rounded-xl p-2 text-white w-50 hover:cursor-pointer text-2xl font-mono hover:border-b-4 hover:border-blue-600 hover:border-t-0 hover:border-r-0 hover:border-l-1 hover:bg-black hover:rounded-lg"
     data-discover="true"
     href="/resume"
   >
