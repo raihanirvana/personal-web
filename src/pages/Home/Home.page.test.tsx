@@ -44,14 +44,14 @@ describe('Home Page', () => {
   describe('useCountdownDisplay Hook', () => {
     jest.useFakeTimers();
   
-    it('should call setShowRole(true) after 4000ms and setShowButtonNavigation(true) after additional 700ms', () => {
+    it('should call setShowRole(true) after 2500ms and setShowButtonNavigation(true) after additional 800ms', () => {
       const setShowRole = jest.fn();
       const setShowButtonNavigation = jest.fn();
   
       renderHook(() => useCountdownDisplay(setShowRole, setShowButtonNavigation));
   
       act(() => {
-        jest.advanceTimersByTime(4000);
+        jest.advanceTimersByTime(2500);
       });
   
       expect(setShowRole).toHaveBeenCalledTimes(1);
@@ -59,7 +59,7 @@ describe('Home Page', () => {
       expect(setShowButtonNavigation).not.toHaveBeenCalled();
 
       act(() => {
-        jest.advanceTimersByTime(700);
+        jest.advanceTimersByTime(800);
       });
   
       expect(setShowButtonNavigation).toHaveBeenCalledTimes(1);

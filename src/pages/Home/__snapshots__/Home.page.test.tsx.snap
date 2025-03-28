@@ -213,15 +213,16 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
     <div
       class="justify-center pl-60 pt-70 flex-col w-fit"
     >
-      <div
-        class="text-white"
+      <p
+        class="text-white text-5xl font-rigid-reguler"
       >
-        <p
-          class="text-5xl font-rigid-reguler"
-        >
-          R
-        </p>
-      </div>
+        R
+      </p>
+      <p
+        class="text-white text-9xl font-rigid-medium"
+      >
+        I
+      </p>
       <p
         class="text-white font-medium tracking-[.85rem] text-3xl"
       >
@@ -463,13 +464,12 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
     <div
       class="justify-center pl-60 pt-70 flex-col w-fit"
     >
-      <div
-        class="text-white"
-      >
-        <p
-          class="text-5xl font-rigid-reguler"
-        />
-      </div>
+      <p
+        class="text-white text-5xl font-rigid-reguler"
+      />
+      <p
+        class="text-white text-9xl font-rigid-medium"
+      />
     </div>
   </div>
 </DocumentFragment>

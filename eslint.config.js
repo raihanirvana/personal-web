@@ -3,7 +3,7 @@ import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
-import jsdoc from 'eslint-plugin-jsdoc'; // Tambahkan plugin jsdoc
+import jsdoc from 'eslint-plugin-jsdoc';
 
 export default tseslint.config(
   { 
