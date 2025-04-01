@@ -14,10 +14,10 @@ import { useHomeEffectReturn } from './Home.page.type';
  */
 const navigationBarAndContacts = (): JSX.Element => (
   <React.Fragment>
-    <div className="fixed top-10 left-60">
+    <div className="fixed top-10 left-20">
       <NavigationBar activeBar={1} />
     </div>
-    <div className="fixed bottom-0 left-60 pb-10">
+    <div className="fixed bottom-0 left-20 pb-10">
       <ContactsList />
     </div>
   </React.Fragment>
@@ -46,7 +46,7 @@ const heroSection = (
   showRole: boolean,
   showButtonNavigation: boolean
 ): JSX.Element => (
-  <div className="justify-center pl-60 pt-70 flex-col w-fit">
+  <div className="justify-center pl-20 pt-70 flex-col w-fit">
     <TypeWriterEffect text='Raihan' customStyle='text-5xl font-rigid-reguler' />
     <TypeWriterEffect text='Irvana' customStyle='text-9xl font-rigid-medium' />
     {showRole && (

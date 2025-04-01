@@ -6,13 +6,13 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
     class="w-full bg-[url('/assets/home-background.jpg')] bg-cover bg-no-repeat bg-center h-screen"
   >
     <div
-      class="fixed top-10 left-60"
+      class="fixed top-10 left-20"
     >
       <div
         class="flex"
       >
         <a
-          class="w-10 overflow-hidden text-white text-center gap-4 flex items-center mr-26 overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600 transform hover:shadow-lg hover:translate-y-[-2px] p-2"
+          class="w-10 overflow-hidden text-white text-center gap-4 flex items-center mr-26 overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600/60 transform hover:shadow-lg hover:translate-y-[-2px] p-2"
           data-discover="true"
           href="/"
           type="button"
@@ -130,7 +130,7 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
       </div>
     </div>
     <div
-      class="fixed bottom-0 left-60 pb-10"
+      class="fixed bottom-0 left-20 pb-10"
     >
       <div
         class="flex items-center gap-3"
@@ -211,7 +211,7 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
       </div>
     </div>
     <div
-      class="justify-center pl-60 pt-70 flex-col w-fit"
+      class="justify-center pl-20 pt-70 flex-col w-fit"
     >
       <p
         class="text-white text-5xl font-rigid-reguler"
@@ -257,13 +257,13 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
     class="w-full bg-[url('/assets/home-background.jpg')] bg-cover bg-no-repeat bg-center h-screen"
   >
     <div
-      class="fixed top-10 left-60"
+      class="fixed top-10 left-20"
     >
       <div
         class="flex"
       >
         <a
-          class="w-10 overflow-hidden text-white text-center gap-4 flex items-center mr-26 overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600 transform hover:shadow-lg hover:translate-y-[-2px] p-2"
+          class="w-10 overflow-hidden text-white text-center gap-4 flex items-center mr-26 overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600/60 transform hover:shadow-lg hover:translate-y-[-2px] p-2"
           data-discover="true"
           href="/"
           type="button"
@@ -381,7 +381,7 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
       </div>
     </div>
     <div
-      class="fixed bottom-0 left-60 pb-10"
+      class="fixed bottom-0 left-20 pb-10"
     >
       <div
         class="flex items-center gap-3"
@@ -462,7 +462,7 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
       </div>
     </div>
     <div
-      class="justify-center pl-60 pt-70 flex-col w-fit"
+      class="justify-center pl-20 pt-70 flex-col w-fit"
     >
       <p
         class="text-white text-5xl font-rigid-reguler"
