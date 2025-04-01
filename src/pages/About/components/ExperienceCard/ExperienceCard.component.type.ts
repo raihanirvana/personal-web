@@ -6,3 +6,5 @@ export type ExperienceCardType = {
   isActive?: boolean,
   border?: boolean
 };
+
+export type ArrayOfExperienceCard = ExperienceCardType[]
