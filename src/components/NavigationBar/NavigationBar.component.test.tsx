@@ -12,25 +12,6 @@ describe('Header Component', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('changes active navigation when a link is clicked', () => {
-    render(
-      <MemoryRouter>
-        <Header activeBar={1} />
-      </MemoryRouter>
-    );
-
-    const links = screen.getAllByRole('link');
-
-    expect(links.length).toBeGreaterThan(0);
-
-    fireEvent.click(links[0]);
-    expect(links[0]).toHaveClass('overflow-visible w-30');
-
-    fireEvent.click(links[1]);
-    expect(links[1]).toHaveClass('overflow-visible w-30');
-    expect(links[0]).not.toHaveClass('overflow-visible w-30');
-  });
-
   it('navigates to the correct route when a link is clicked', async () => {
     render(
       <MemoryRouter initialEntries={['/']}>

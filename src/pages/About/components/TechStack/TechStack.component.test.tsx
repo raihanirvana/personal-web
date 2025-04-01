@@ -4,7 +4,7 @@ import TechStack from './TechStack.component';
 
 describe('TechStack', () => {
   it('should match snapshot', () => {
-    const { asFragment } = render(<TechStack width={20} />);
+    const { asFragment } = render(<TechStack />);
 
     expect(asFragment()).toMatchSnapshot();
   });
