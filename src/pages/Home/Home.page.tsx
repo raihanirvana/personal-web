@@ -8,19 +8,25 @@ import { NavigationButton } from './components';
 import { useHomeEffectReturn } from './Home.page.type';
 
 /**
+ * Renders and contacts list.
+ *
+ * @returns {JSX.Element} The JSX element containing contacts list.
+ */
+const renderContacts = (): JSX.Element => (
+  <div className="mt-10 w-screen">
+    <ContactsList />
+  </div>
+);
+
+/**
  * Renders the navigation bar and contacts list.
  *
  * @returns {JSX.Element} The JSX element containing the navigation bar and contacts list.
  */
-const navigationBarAndContacts = (): JSX.Element => (
-  <React.Fragment>
-    <div className="fixed top-10 left-20">
-      <NavigationBar activeBar={1} />
-    </div>
-    <div className="fixed bottom-0 left-20 pb-10">
-      <ContactsList />
-    </div>
-  </React.Fragment>
+const renderNavigationBar = (): JSX.Element => (
+  <div className="fixed top-10 left-5">
+    <NavigationBar activeBar={1} />
+  </div>
 );
 
 /**
@@ -29,7 +35,7 @@ const navigationBarAndContacts = (): JSX.Element => (
  * @returns {JSX.Element} The JSX element containing navigation buttons.
  */
 const navigationButton = (): JSX.Element => (
-  <div className="pt-15 flex gap-5 justify-center ml-[-1rem]">
+  <div className="pt-5 md:pt-15 flex gap-5 justify-center ml-[-1rem]">
     <NavigationButton text="Resume" navigate="/resume" />
     <NavigationButton text="Project" navigate="/project" />
   </div>
@@ -46,11 +52,11 @@ const heroSection = (
   showRole: boolean,
   showButtonNavigation: boolean
 ): JSX.Element => (
-  <div className="justify-center pl-20 pt-70 flex-col w-fit">
-    <TypeWriterEffect text='Raihan' customStyle='text-5xl font-rigid-reguler' />
-    <TypeWriterEffect text='Irvana' customStyle='text-9xl font-rigid-medium' />
+  <div className="justify-center pl-5 md:pl-20 pt-30 md:pt-70 flex-col w-fit">
+    <TypeWriterEffect text='Raihan' customStyle='text-2xl md:text-5xl font-rigid-reguler' />
+    <TypeWriterEffect text='Irvana' customStyle='text-6xl md:text-9xl font-rigid-medium' />
     {showRole && (
-      <GeneralText text="Full Stack Engineer" customStyle="font-medium tracking-[.85rem] text-3xl" />
+      <GeneralText text="Full Stack Engineer" customStyle="font-medium tracking-[.40rem] md:tracking-[.85rem] text-sm md:text-3xl" />
     )}
     {showButtonNavigation && navigationButton()}
   </div>
@@ -106,12 +112,13 @@ const Home = (): JSX.Element => {
   const { showRole, showButtonNavigation } = useHomeEffect();
 
   return (
-    <div className="w-full bg-[url('/assets/home-background.jpg')] bg-cover bg-no-repeat bg-center h-screen">
+    <div className="w-full bg-[url('/assets/home-background.jpg')] bg-cover bg-no-repeat bg-center h-full">
       <Helmet>
         <title>Home</title>
       </Helmet>
-      {navigationBarAndContacts()}
+      {renderNavigationBar()}
       {heroSection(showRole, showButtonNavigation)}
+      {renderContacts()}
     </div>
   );
 };
