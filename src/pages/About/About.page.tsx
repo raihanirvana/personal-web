@@ -81,7 +81,7 @@ const renderTechnologyStack = (): JSX.Element => (
  * Renders job and education experience.
  * @returns {JSX.Element}
  */
-const renderWorkandEducationExperience = (): JSX.Element => (
+const renderWorkAndEducationExperience = (): JSX.Element => (
   <div className='pt-10'>
     {WorkandEducationData.map((data, idx) => (
       <div key={idx}>
@@ -117,14 +117,17 @@ const renderOrganizationExperience = (): JSX.Element => (
 );
 
 /**
- * Renders education and organization experiences.
+ * Renders left card containing personal info, about, and tech stack.
  * @returns {JSX.Element}
  */
-const renderOrganizationSection = (): JSX.Element => (
-  <div className='flex-[1] min-w-0 h-full'>
-    <div className="bg-[#0f0f0f] rounded-2xl p-6 shadow-lg shadow-blue-600/40">
-      <GeneralText text='Organization' customStyle='text-3xl font-bold text-center' />
-      {renderOrganizationExperience()}
+const renderLeftSidebarContent = (): JSX.Element => (
+  <div className='flex-[1] min-w-0'>
+    <div className="bg-[#0f0f0f] rounded-2xl p-6 shadow-lg shadow-blue-600/40 h-full">
+      {renderPersonalInformation()}
+      <hr className="border-t border-gray-300 my-4" />
+      {renderAboutSection()}
+      <hr className="border-t border-gray-300 my-4" />
+      {renderTechnologyStack()}
     </div>
   </div>
 );
@@ -134,26 +137,23 @@ const renderOrganizationSection = (): JSX.Element => (
  * @returns {JSX.Element}
  */
 const renderWorkExperienceAndEducationSection = (): JSX.Element => (
-  <div className='flex-[2] min-w-0 h-full'>
-    <div className="bg-[#0f0f0f] rounded-2xl p-6 shadow-lg shadow-blue-600/40">
+  <div className='flex-[2] min-w-0'>
+    <div className="bg-[#0f0f0f] rounded-2xl p-6 shadow-lg shadow-blue-600/40 h-full">
       <GeneralText text='Work Experience and Education' customStyle='text-3xl font-bold text-center' />
-      {renderWorkandEducationExperience()}
+      {renderWorkAndEducationExperience()}
     </div>
   </div>
 );
 
 /**
- * Renders left card containing personal info, about, and tech stack.
+ * Renders education and organization experiences.
  * @returns {JSX.Element}
  */
-const renderLeftSidebarContent = (): JSX.Element => (
-  <div className='flex-[1] min-w-0 h-full'>
-    <div className="bg-[#0f0f0f] rounded-2xl p-6 shadow-lg shadow-blue-600/40">
-      {renderPersonalInformation()}
-      <hr className="border-t border-gray-300 my-4" />
-      {renderAboutSection()}
-      <hr className="border-t border-gray-300 my-4" />
-      {renderTechnologyStack()}
+const renderOrganizationSection = (): JSX.Element => (
+  <div className='flex-[1] min-w-0'>
+    <div className="bg-[#0f0f0f] rounded-2xl p-6 shadow-lg shadow-blue-600/40 h-full">
+      <GeneralText text='Organization' customStyle='text-3xl font-bold text-center' />
+      {renderOrganizationExperience()}
     </div>
   </div>
 );
@@ -177,7 +177,7 @@ const renderMetaData = (): JSX.Element => (
 const About = (): JSX.Element => (
   <div className="bg-black min-h-screen">
     {renderMetaData()}
-    <div className='flex pt-40 mr-20 gap-5 ml-20 h-[729px]'>
+    <div className='flex pt-40 mr-20 gap-5 ml-20'>
       {renderLeftSidebarContent()}
       {renderWorkExperienceAndEducationSection()}
       {renderOrganizationSection()}
