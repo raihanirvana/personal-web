@@ -10,11 +10,11 @@ import {
 import { Link } from 'react-router-dom';
 
 const baseClass =
-  'w-10 overflow-hidden text-white text-center gap-4 flex items-center mr-26';
+  'w-4 gap-1 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26';
 const activeClass =
-  'overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600/60 transform hover:shadow-lg hover:translate-y-[-2px] p-2';
+  'overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-18 md:w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600/60 transform hover:shadow-lg hover:translate-y-[-2px] p-2';
 const hoverClass =
-  'hover:overflow-visible hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer';
+  'hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer';
 
 /**
  * Renders a header element with optional styles for first or last headers.
@@ -35,8 +35,8 @@ const renderHeaderItem = (
     onClick={() => onChangeActiveNavigation(key)}
     className={`${baseClass} ${isActive ? activeClass : hoverClass}`}
   >
-    <span className="text-2xl">{icon}</span>
-    <span className="text-xl">{title}</span>
+    <span className="text-sm md:text-2xl">{icon}</span>
+    <span className="text-sm md:text-xl">{title}</span>
   </Link>
 );
 
@@ -69,7 +69,7 @@ const NavigationBar = ({ activeBar }: Props): JSX.Element => {
     useActiveNavigation(activeBar);
 
   return (
-    <div className="flex">
+    <div className="flex gap-4 md:gap-0">
       {headersList.map((header: HeaderItem) => (
         <React.Fragment key={header.key}>
           {renderHeaderItem(header, onChangeActiveNavigation,activeNavigation === header.key)}
