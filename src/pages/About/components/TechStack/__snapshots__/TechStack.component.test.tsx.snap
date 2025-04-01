@@ -3,7 +3,7 @@
 exports[`TechStack should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="w-[400px] overflow-hidden relative"
+    class="w-20 overflow-hidden relative"
   >
     <div
       class="flex w-max gap-6 whitespace-nowrap scrollAnimation"

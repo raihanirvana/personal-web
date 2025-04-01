@@ -4,3 +4,7 @@ export type TechStackItem = {
 };
 
 export type TechStack = TechStackItem[]
+
+export type TechStackProps = {
+  width: number;
+};

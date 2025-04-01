@@ -2,6 +2,7 @@ import React from 'react'
 
 import techStackData from '../../../../data/TechStack.data';
 
+import { TechStackProps } from './TechStack.component.type'
 import './TechStack.component.css';
 
 const techStackLogo = () => (
@@ -17,12 +18,10 @@ const techStackLogo = () => (
   </React.Fragment>
 )
 
-const TechStack = (): JSX.Element => {
+const TechStack = ({ width }: TechStackProps): JSX.Element => {
   return (
-    <div className="w-[400px] overflow-hidden relative">
-      <div
-        className="flex w-max gap-6 whitespace-nowrap scrollAnimation"
-      >
+    <div className={`w-${width} overflow-hidden relative`}>
+      <div className="flex w-max gap-6 whitespace-nowrap scrollAnimation">
         {techStackLogo()}
       </div>
     </div>
