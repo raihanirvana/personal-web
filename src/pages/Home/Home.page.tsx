@@ -8,25 +8,19 @@ import { NavigationButton } from './components';
 import { useHomeEffectReturn } from './Home.page.type';
 
 /**
- * Renders and contacts list.
- *
- * @returns {JSX.Element} The JSX element containing contacts list.
- */
-const renderContacts = (): JSX.Element => (
-  <div className="mt-10 w-screen">
-    <ContactsList />
-  </div>
-);
-
-/**
  * Renders the navigation bar and contacts list.
  *
  * @returns {JSX.Element} The JSX element containing the navigation bar and contacts list.
  */
-const renderNavigationBar = (): JSX.Element => (
-  <div className="fixed top-10 left-5">
-    <NavigationBar activeBar={1} />
-  </div>
+const navigationBarAndContacts = (): JSX.Element => (
+  <React.Fragment>
+    <div className="fixed top-10 left-5">
+      <NavigationBar activeBar={1} />
+    </div>
+    <div className="fixed bottom-0 pl-5 pb-0 md:pb-10 w-screen">
+      <ContactsList />
+    </div>
+  </React.Fragment>
 );
 
 /**
@@ -112,13 +106,12 @@ const Home = (): JSX.Element => {
   const { showRole, showButtonNavigation } = useHomeEffect();
 
   return (
-    <div className="w-full bg-[url('/assets/home-background.jpg')] bg-cover bg-no-repeat bg-center h-full">
+    <div className="w-full bg-[url('/assets/home-background.jpg')] bg-cover bg-no-repeat bg-center min-h-screen">
       <Helmet>
         <title>Home</title>
       </Helmet>
-      {renderNavigationBar()}
+      {navigationBarAndContacts()}
       {heroSection(showRole, showButtonNavigation)}
-      {renderContacts()}
     </div>
   );
 };
