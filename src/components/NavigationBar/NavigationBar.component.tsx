@@ -10,7 +10,7 @@ import {
 import { Link } from 'react-router-dom';
 
 const baseClass =
-  'w-4 gap-1 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26';
+  'w-4 gap-1 mr-5 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26';
 const activeClass =
   'overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-18 md:w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600/60 transform hover:shadow-lg hover:translate-y-[-2px] p-2';
 const hoverClass =
