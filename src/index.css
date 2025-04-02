@@ -20,14 +20,14 @@ body, html {
   font-family: 'RigidReguler';
   font-style: normal;
   font-weight: normal;
-  src: url('font/RigidRegular.woff') format('woff');
+  src: url('/font/RigidRegular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'RigidMedium';
   font-style: normal;
   font-weight: normal;
-  src: url('font/RigidMedium.woff') format('woff');
+  src: url('/font/RigidMedium.woff') format('woff');
 }
 
 @theme {
