@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import React from 'react';
 
 import headersList from '../../data/NavigationsList.data';
@@ -59,6 +60,34 @@ const useActiveNavigation = (activeBar: number): UseActiveButtonReturn => {
   };
 };
 
+const useNavbarVisibility = (delay = 500): boolean => {
+  const [isScrolling, setIsScrolling] = React.useState(false);
+  const scrollTimeout = React.useRef<NodeJS.Timeout | null>(null);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(true);
+
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+
+      scrollTimeout.current = setTimeout(() => {
+        setIsScrolling(false);
+      }, delay);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+    };
+  }, [delay]);
+
+  return isScrolling;
+};
+
 /**
  * A functional component that renders a list of headers.
  *
@@ -67,9 +96,10 @@ const useActiveNavigation = (activeBar: number): UseActiveButtonReturn => {
 const NavigationBar = ({ activeBar }: Props): JSX.Element => {
   const { onChangeActiveNavigation, activeNavigation } =
     useActiveNavigation(activeBar);
+  const isHidden = useNavbarVisibility()
 
   return (
-    <div className="flex gap-4 w-screen justify-between lg:gap-0 lg:w-fit lg:justify-normal">
+    <div className={`flex gap-4 w-screen justify-between lg:gap-0 lg:w-fit lg:justify-normal transition-opacity duration-500 ${ isHidden ? 'opacity-20' : 'opacity-100' }`}>
       {headersList.map((header: HeaderItem) => (
         <React.Fragment key={header.key}>
           {renderHeaderItem(header, onChangeActiveNavigation,activeNavigation === header.key)}
