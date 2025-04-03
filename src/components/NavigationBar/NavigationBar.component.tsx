@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 import React from 'react';
 
 import headersList from '../../data/NavigationsList.data';
@@ -60,31 +59,53 @@ const useActiveNavigation = (activeBar: number): UseActiveButtonReturn => {
   };
 };
 
-const useNavbarVisibility = (delay = 500): boolean => {
-  const [isScrolling, setIsScrolling] = React.useState(false);
+/**
+ * Returns a debounced scroll handler.
+ *
+ * @param {Function} setIsScrolling - Function to update the scrolling state.
+ * @param {React.MutableRefObject<NodeJS.Timeout | null>} scrollTimeout - Reference for the debounce timeout.
+ * @param {number} delay - Delay in milliseconds before setting scrolling to false.
+ * @returns {() => void} The scroll handler function.
+ */
+const handleScrollWithDebounce = (
+  setIsScrolling: React.Dispatch<React.SetStateAction<boolean>>,
+  scrollTimeout: React.MutableRefObject<NodeJS.Timeout | null>,
+  delay: number
+): (() => void) => {
+  return () => {
+    setIsScrolling(true);
+    if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
+    scrollTimeout.current = setTimeout(() => setIsScrolling(false), delay);
+  };
+};
+
+/**
+ * Attaches and cleans up the scroll event listener.
+ *
+ * @param {() => void} handler - The scroll event handler.
+ */
+const useScrollListener = (handler: () => void) => {
+  React.useEffect(() => {
+    window.addEventListener('scroll', handler, { passive: true });
+    return () => window.removeEventListener('scroll', handler);
+  }, [handler]);
+};
+
+/**
+ * Custom React hook to determine whether the user is currently scrolling.
+ *
+ * @param {number} [delay=500] - The debounce delay in milliseconds to wait after the last scroll event.
+ * @returns {boolean} `true` if the user is currently scrolling, `false` otherwise.
+ */
+export const useNavbarVisibility = (delay: number = 500): boolean => {
+  const [isScrolling, setIsScrolling] = React.useState<boolean>(false);
   const scrollTimeout = React.useRef<NodeJS.Timeout | null>(null);
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolling(true);
-
-      if (scrollTimeout.current) {
-        clearTimeout(scrollTimeout.current);
-      }
-
-      scrollTimeout.current = setTimeout(() => {
-        setIsScrolling(false);
-      }, delay);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
-    };
-  }, [delay]);
-
+  const handleScroll = React.useCallback(
+    handleScrollWithDebounce(setIsScrolling, scrollTimeout, delay),
+    [delay]
+  );
+  useScrollListener(handleScroll);
   return isScrolling;
 };
 
@@ -96,10 +117,10 @@ const useNavbarVisibility = (delay = 500): boolean => {
 const NavigationBar = ({ activeBar }: Props): JSX.Element => {
   const { onChangeActiveNavigation, activeNavigation } =
     useActiveNavigation(activeBar);
-  const isHidden = useNavbarVisibility()
+  const isScrolling = useNavbarVisibility()
 
   return (
-    <div className={`flex gap-4 w-screen justify-between lg:gap-0 lg:w-fit lg:justify-normal transition-opacity duration-500 ${ isHidden ? 'opacity-20' : 'opacity-100' }`}>
+    <div className={`flex gap-4 w-screen justify-between lg:gap-0 lg:w-fit lg:justify-normal transition-opacity duration-500 ${ isScrolling ? 'opacity-20' : 'opacity-100' }`}>
       {headersList.map((header: HeaderItem) => (
         <React.Fragment key={header.key}>
           {renderHeaderItem(header, onChangeActiveNavigation,activeNavigation === header.key)}
