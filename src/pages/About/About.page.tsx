@@ -25,10 +25,10 @@ const personalInfoItems: ArrayInfoItem = [
  */
 const renderFixedHeaderAndContacts = (): JSX.Element => (
   <React.Fragment>
-    <div className="fixed top-10 left-20">
+    <div className="fixed top-10 pl-5 md:pl-20">
       <NavigationBar activeBar={2} />
     </div>
-    <div className="fixed bottom-0 left-20 pb-10 w-full">
+    <div className="fixed bottom-0 w-screen px-5 md:pb-10 md:px-20">
       <ContactsList />
     </div>
   </React.Fragment>
@@ -177,7 +177,7 @@ const renderMetaData = (): JSX.Element => (
 const About = (): JSX.Element => (
   <div className="bg-black min-h-screen">
     {renderMetaData()}
-    <div className='flex pt-40 mr-20 gap-5 ml-20'>
+    <div className='flex flex-col w-screen pt-40 gap-10 px-5 xl-px-0 xl:gap-5 xl:flex-row xl:pr-20 xl:pl-20'>
       {renderLeftSidebarContent()}
       {renderWorkExperienceAndEducationSection()}
       {renderOrganizationSection()}
