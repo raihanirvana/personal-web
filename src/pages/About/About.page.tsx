@@ -7,7 +7,7 @@ import OrganizationExperience from '../../data/Organization.data';
 import WorkandEducationData from '../../data/WorkandEducationData';
 import { NavigationBar, ContactsList, GeneralText } from '../../components';
 
-import { ArrayInfoItem } from './AboutPage.type';
+import { ArrayInfoItem, SectionContainerType } from './AboutPage.type';
 import { TechStack, ExperienceCard } from './components';
 
 const aboutText = `Full Stack Engineer with 3+ years of experience in web and mobile development, skilled in JavaScript, React, React Native, Next.js, and Node.js.`;
@@ -40,7 +40,8 @@ const renderFixedHeaderAndContacts = (): JSX.Element => (
  */
 const renderPersonalInformation = (): JSX.Element => (
   <div>
-    <GeneralText text="Raihan Irvana" customStyle='text-center text-3xl font-bold' />
+    <GeneralText text="Profile Overview" customStyle='text-center text-3xl font-bold' />
+    <GeneralText text="Raihan Irvana" customStyle='text-center text-xl font-bold pt-10' />
     {personalInfoItems.map((item, idx) => (
       <div key={idx} className='flex items-center gap-2 pt-5 text-white'>
         {item.icon}
@@ -57,7 +58,7 @@ const renderPersonalInformation = (): JSX.Element => (
  */
 const renderAboutSection = (): JSX.Element => (
   <div>
-    <GeneralText text="ABOUT" customStyle="text-3xl font-bold text-center" />
+    <GeneralText text="ABOUT" customStyle="text-xl font-bold text-center" />
     <GeneralText text={aboutText} customStyle="pt-5 text-justify" />
     <GeneralText text={aboutText2} customStyle="text-justify" />
   </div>
@@ -71,7 +72,7 @@ const renderTechnologyStack = (): JSX.Element => (
   <div>
     <GeneralText
       text="Technology Stack"
-      customStyle="text-3xl font-bold text-center pb-10"
+      customStyle="text-xl font-bold text-center pb-10"
     />
     <TechStack />
   </div>
@@ -117,18 +118,28 @@ const renderOrganizationExperience = (): JSX.Element => (
 );
 
 /**
+ * Renders card container.
+ * @returns {JSX.Element}
+ */
+const SectionContainer = ({children}: SectionContainerType): JSX.Element => (
+  <div className="bg-[#0f0f0f] rounded-2xl p-6 shadow-lg shadow-blue-600/40 h-full">
+    {children}
+  </div>
+);
+
+/**
  * Renders left card containing personal info, about, and tech stack.
  * @returns {JSX.Element}
  */
-const renderLeftSidebarContent = (): JSX.Element => (
+const renderProfileOverview = (): JSX.Element => (
   <div className='flex-[1] min-w-0'>
-    <div className="bg-[#0f0f0f] rounded-2xl p-6 shadow-lg shadow-blue-600/40 h-full">
+    <SectionContainer>
       {renderPersonalInformation()}
       <hr className="border-t border-gray-300 my-4" />
       {renderAboutSection()}
       <hr className="border-t border-gray-300 my-4" />
       {renderTechnologyStack()}
-    </div>
+    </SectionContainer>
   </div>
 );
 
@@ -138,10 +149,10 @@ const renderLeftSidebarContent = (): JSX.Element => (
  */
 const renderWorkExperienceAndEducationSection = (): JSX.Element => (
   <div className='flex-[2] min-w-0'>
-    <div className="bg-[#0f0f0f] rounded-2xl p-6 shadow-lg shadow-blue-600/40 h-full">
+    <SectionContainer>
       <GeneralText text='Work Experience and Education' customStyle='text-3xl font-bold text-center' />
       {renderWorkAndEducationExperience()}
-    </div>
+    </SectionContainer>
   </div>
 );
 
@@ -151,13 +162,12 @@ const renderWorkExperienceAndEducationSection = (): JSX.Element => (
  */
 const renderOrganizationSection = (): JSX.Element => (
   <div className='flex-[1] min-w-0'>
-    <div className="bg-[#0f0f0f] rounded-2xl p-6 shadow-lg shadow-blue-600/40 h-full">
+    <SectionContainer>
       <GeneralText text='Organization' customStyle='text-3xl font-bold text-center' />
       {renderOrganizationExperience()}
-    </div>
+    </SectionContainer>
   </div>
 );
-
 /**
  * Metadata for the About page.
  * @returns {JSX.Element}
@@ -178,7 +188,7 @@ const About = (): JSX.Element => (
   <div className="bg-black min-h-screen">
     {renderMetaData()}
     <div className='flex flex-col w-screen pt-40 gap-10 lg:gap-5 px-5 xl:px-0 xl:gap-5 lg:flex-row xl:pr-20 xl:pl-20'>
-      {renderLeftSidebarContent()}
+      {renderProfileOverview()}
       {renderWorkExperienceAndEducationSection()}
       {renderOrganizationSection()}
     </div>

@@ -84,7 +84,7 @@ exports[`ContactsList Component matches the snapshot 1`] = `
       <p
         class="text-white text-[8px] sm:text-sm"
       >
-        *Showcasing my CSS and component-building skills — no third-party tools used.
+        *This website is built without third-party components.
       </p>
     </div>
   </div>

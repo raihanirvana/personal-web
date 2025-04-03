@@ -13,7 +13,7 @@ const ExperienceCard = ({ title, date, role, description, isActive, border }: Ex
   return (
     <React.Fragment>
       <div>
-        <GeneralText text={title} />
+        <GeneralText text={title} customStyle='text-xl font-bold' />
         <div className='flex items-center gap-3 pt-2'>
           <FaRegCalendarAlt className='text-white' />
           <GeneralText text={date} />

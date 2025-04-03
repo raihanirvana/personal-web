@@ -12,7 +12,7 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
         class="flex gap-4 w-screen justify-between lg:gap-0 lg:w-fit lg:justify-normal transition-opacity duration-500 opacity-100"
       >
         <a
-          class="w-4 gap-1 mr-10 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-18 md:w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600/60 transform hover:shadow-lg hover:translate-y-[-2px] p-2"
+          class="w-4 gap-1 mr-10 md:w-8 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-18 md:w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600/60 transform hover:shadow-lg hover:translate-y-[-2px] p-2"
           data-discover="true"
           href="/"
           type="button"
@@ -41,7 +41,7 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
           </span>
         </a>
         <a
-          class="w-4 gap-1 mr-10 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
+          class="w-4 gap-1 mr-10 md:w-8 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
           data-discover="true"
           href="/about"
           type="button"
@@ -70,7 +70,7 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
           </span>
         </a>
         <a
-          class="w-4 gap-1 mr-10 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
+          class="w-4 gap-1 mr-10 md:w-8 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
           data-discover="true"
           href="/resume"
           type="button"
@@ -99,7 +99,7 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
           </span>
         </a>
         <a
-          class="w-4 gap-1 mr-10 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
+          class="w-4 gap-1 mr-10 md:w-8 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
           data-discover="true"
           href="/project"
           type="button"
@@ -214,7 +214,7 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
           <p
             class="text-white text-[8px] sm:text-sm"
           >
-            *Showcasing my CSS and component-building skills — no third-party tools used.
+            *This website is built without third-party components.
           </p>
         </div>
       </div>
@@ -272,7 +272,7 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
         class="flex gap-4 w-screen justify-between lg:gap-0 lg:w-fit lg:justify-normal transition-opacity duration-500 opacity-100"
       >
         <a
-          class="w-4 gap-1 mr-10 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-18 md:w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600/60 transform hover:shadow-lg hover:translate-y-[-2px] p-2"
+          class="w-4 gap-1 mr-10 md:w-8 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 overflow-visible transition-all duration-300 ease-in-out cursor-pointer w-18 md:w-30 rounded-lg shadow-md border-b-4 border-l-1 border-blue-600/60 transform hover:shadow-lg hover:translate-y-[-2px] p-2"
           data-discover="true"
           href="/"
           type="button"
@@ -301,7 +301,7 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
           </span>
         </a>
         <a
-          class="w-4 gap-1 mr-10 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
+          class="w-4 gap-1 mr-10 md:w-8 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
           data-discover="true"
           href="/about"
           type="button"
@@ -330,7 +330,7 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
           </span>
         </a>
         <a
-          class="w-4 gap-1 mr-10 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
+          class="w-4 gap-1 mr-10 md:w-8 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
           data-discover="true"
           href="/resume"
           type="button"
@@ -359,7 +359,7 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
           </span>
         </a>
         <a
-          class="w-4 gap-1 mr-10 md:w-10 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
+          class="w-4 gap-1 mr-10 md:w-8 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
           data-discover="true"
           href="/project"
           type="button"
@@ -474,7 +474,7 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
           <p
             class="text-white text-[8px] sm:text-sm"
           >
-            *Showcasing my CSS and component-building skills — no third-party tools used.
+            *This website is built without third-party components.
           </p>
         </div>
       </div>

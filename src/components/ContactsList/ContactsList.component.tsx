@@ -33,7 +33,7 @@ const ContactsList = (): JSX.Element => (
     {renderIcon()}
     <div>
       <GeneralText
-        text="*Showcasing my CSS and component-building skills — no third-party tools used."
+        text="*This website is built without third-party components."
         customStyle="text-[8px] sm:text-sm"
       />
     </div>

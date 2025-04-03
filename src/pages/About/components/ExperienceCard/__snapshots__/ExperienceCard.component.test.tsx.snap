@@ -4,7 +4,7 @@ exports[`ExperienceCard must matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <p
-      class="text-white undefined"
+      class="text-white text-xl font-bold"
     >
       a
     </p>
