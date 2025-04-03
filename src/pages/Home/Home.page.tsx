@@ -46,7 +46,7 @@ const heroSection = (
   showRole: boolean,
   showButtonNavigation: boolean
 ): JSX.Element => (
-  <div className="justify-center pl-5 md:pl-20 pt-50 md:pt-70 flex-col w-fit">
+  <div className="flex justify-center pl-5 flex-col w-fit min-h-screen md:pl-20 md:pt-70">
     <TypeWriterEffect text='Raihan' customStyle='text-2xl md:text-5xl font-rigid-reguler' />
     <TypeWriterEffect text='Irvana' customStyle='text-6xl md:text-9xl font-rigid-medium' />
     {showRole && (
