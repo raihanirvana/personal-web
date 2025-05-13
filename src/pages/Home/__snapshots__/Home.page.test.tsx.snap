@@ -6,7 +6,7 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
     class="w-full bg-[url('/assets/home-background.jpg')] bg-cover bg-no-repeat bg-center min-h-screen"
   >
     <div
-      class="fixed top-10 pl-5 md:pl-20"
+      class="fixed top-10 pl-5 xl:pl-20"
     >
       <div
         class="flex gap-4 w-screen justify-between lg:gap-0 lg:w-fit lg:justify-normal transition-opacity duration-500 opacity-100"
@@ -38,35 +38,6 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
             class="text-sm md:text-xl"
           >
             Home
-          </span>
-        </a>
-        <a
-          class="w-4 gap-1 mr-10 md:w-8 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
-          data-discover="true"
-          href="/about"
-          type="button"
-        >
-          <span
-            class="text-sm md:text-2xl"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
-              />
-            </svg>
-          </span>
-          <span
-            class="text-sm md:text-xl"
-          >
-            About
           </span>
         </a>
         <a
@@ -130,7 +101,7 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
       </div>
     </div>
     <div
-      class="fixed bottom-0 pl-5 pb-0 md:pb-10 md:pl-20 w-screen"
+      class="fixed bottom-0 pl-5 pb-0 md:pb-10 xl:pl-20 w-screen"
     >
       <div
         class="flex items-center justify-between"
@@ -220,7 +191,7 @@ exports[`Home Page Home Page should match snapshot after 4700ms 1`] = `
       </div>
     </div>
     <div
-      class="flex justify-center pl-5 flex-col w-fit min-h-screen md:pl-20"
+      class="flex justify-center pl-5 flex-col w-fit min-h-screen xl:pl-20"
     >
       <p
         class="text-white text-2xl md:text-5xl font-rigid-reguler"
@@ -266,7 +237,7 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
     class="w-full bg-[url('/assets/home-background.jpg')] bg-cover bg-no-repeat bg-center min-h-screen"
   >
     <div
-      class="fixed top-10 pl-5 md:pl-20"
+      class="fixed top-10 pl-5 xl:pl-20"
     >
       <div
         class="flex gap-4 w-screen justify-between lg:gap-0 lg:w-fit lg:justify-normal transition-opacity duration-500 opacity-100"
@@ -298,35 +269,6 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
             class="text-sm md:text-xl"
           >
             Home
-          </span>
-        </a>
-        <a
-          class="w-4 gap-1 mr-10 md:w-8 overflow-hidden text-white text-center md:gap-4 flex items-center md:mr-26 hover:w-16 hover:overflow-visible md:hover:w-30 transition-all duration-500 ease-in-out hover:cursor-pointer"
-          data-discover="true"
-          href="/about"
-          type="button"
-        >
-          <span
-            class="text-sm md:text-2xl"
-          >
-            <svg
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              stroke-width="0"
-              viewBox="0 0 512 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
-              />
-            </svg>
-          </span>
-          <span
-            class="text-sm md:text-xl"
-          >
-            About
           </span>
         </a>
         <a
@@ -390,7 +332,7 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
       </div>
     </div>
     <div
-      class="fixed bottom-0 pl-5 pb-0 md:pb-10 md:pl-20 w-screen"
+      class="fixed bottom-0 pl-5 pb-0 md:pb-10 xl:pl-20 w-screen"
     >
       <div
         class="flex items-center justify-between"
@@ -480,7 +422,7 @@ exports[`Home Page Home Page should match snapshot initially 1`] = `
       </div>
     </div>
     <div
-      class="flex justify-center pl-5 flex-col w-fit min-h-screen md:pl-20"
+      class="flex justify-center pl-5 flex-col w-fit min-h-screen xl:pl-20"
     >
       <p
         class="text-white text-2xl md:text-5xl font-rigid-reguler"

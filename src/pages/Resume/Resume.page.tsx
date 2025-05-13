@@ -2,7 +2,9 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
-import { NavigationBar, ContactsList } from '../../components';
+import { NavigationBar, ContactsList } from '../../components'
+
+import ResumeCard from './components/ResumeCard/ResumeCard.component';
 
 /**
  * Renders the navigation bar and contact list.

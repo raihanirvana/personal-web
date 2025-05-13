@@ -1,13 +1,10 @@
-// TechStack.tsx
-
-
 import techStackData from '../../../../data/TechStack.data';
 
 import './TechStack.component.css';
 
 const techStackLogo = () => (
   <>
-    {[...techStackData, ...techStackData].map((tech, index) => (
+    {[...techStackData, ...techStackData,].map((tech, index) => (
       <div
         key={index < techStackData.length ? index : index - techStackData.length + 10}
         className="text-4xl text-white flex-shrink-0"

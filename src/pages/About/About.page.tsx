@@ -168,6 +168,7 @@ const renderOrganizationSection = (): JSX.Element => (
     </SectionContainer>
   </div>
 );
+
 /**
  * Metadata for the About page.
  * @returns {JSX.Element}

@@ -39,22 +39,6 @@ describe('Header Component', () => {
     expect(headerWrapper?.className).toContain('opacity-100');
     expect(headerWrapper?.className).not.toContain('opacity-20');
   });
-  
-  it('navigates to the correct route when a link is clicked', async () => {
-    render(
-      <MemoryRouter initialEntries={['/']}>
-        <Routes>
-          <Route path="/" element={<Header activeBar={1} />} />
-          <Route path="/about" element={<div>About Page</div>} />
-        </Routes>
-      </MemoryRouter>
-    );
-
-    const aboutLink = screen.getByRole('link', { name: /about/i });
-    fireEvent.click(aboutLink);
-
-    expect(await screen.findByText('About Page')).toBeInTheDocument();
-  });
 
   it('navigates to the correct route when a link is clicked', async () => {
     render(
